@@ -1,2 +1,2 @@
-insert into item (name, price, description) values ('Round Widget', 2.99, 'A widget that is round');
-insert into item (name, price, description) values ('Square Widget', 1.99, 'A widget that is square');
+insert into item (name, price, description) values ('Iphone 15', 999, 'A new Iphone');
+insert into item (name, price, description) values ('Samsung S23 Ultra', 1999, 'A new Samsung Galaxy');

@@ -11,7 +11,7 @@ public class ItemTest {
     public void testNotEquals() {
         Item item1 = DummyData.getItemDataFirst();
         assertNotEquals(item1, null);
-        Item item2 = DummyData.getItemDataFirst();
+        Item item2 = DummyData.getItemDataSecond();
         assertNotEquals(item2, null);
         assertNotEquals(item1, item2);
     }

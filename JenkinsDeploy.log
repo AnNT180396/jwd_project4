@@ -1,0 +1,251 @@
+Started by user Admin Jenkins
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/myFirstJob
+The recommended git tool is: NONE
+using credential e88bb350-0d01-4a36-a422-0d2e823f47d1
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/myFirstJob/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/AnNT180396/jwd_project4.git # timeout=10
+Fetching upstream changes from https://github.com/AnNT180396/jwd_project4.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.36.2'
+using GIT_SSH to set credentials 
+Verifying host key using known hosts file
+You're using 'Known hosts file' strategy to verify ssh host keys, but your known_hosts file does not exist, please go to 'Manage Jenkins' -> 'Configure Global Security' -> 'Git Host Key Verification Configuration' and configure host key verification.
+ > git fetch --tags --force --progress -- https://github.com/AnNT180396/jwd_project4.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision e65407899b13c6ef476d10ab2091569aa1830ecc (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e65407899b13c6ef476d10ab2091569aa1830ecc # timeout=10
+Commit message: "Update pom.xml"
+ > git rev-list --no-walk e65407899b13c6ef476d10ab2091569aa1830ecc # timeout=10
+[myFirstJob] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.8.5/bin/mvn -f pom.xml clean compile package
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:ecommerce-app >----------------------
+[INFO] Building ecommerce-app 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ ecommerce-app ---
+[INFO] Deleting /var/jenkins_home/workspace/myFirstJob/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ ecommerce-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ ecommerce-app ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/myFirstJob/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ ecommerce-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ ecommerce-app ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/myFirstJob/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ ecommerce-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/myFirstJob/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ ecommerce-app ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /var/jenkins_home/workspace/myFirstJob/target/test-classes
+[INFO] /var/jenkins_home/workspace/myFirstJob/src/test/java/com/example/demo/InjectMockUtils.java: /var/jenkins_home/workspace/myFirstJob/src/test/java/com/example/demo/InjectMockUtils.java uses or overrides a deprecated API.
+[INFO] /var/jenkins_home/workspace/myFirstJob/src/test/java/com/example/demo/InjectMockUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ ecommerce-app ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+2023-10-21 17:06:41,419 main DEBUG Apache Log4j Core 2.13.3 initializing configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml]
+2023-10-21 17:06:41,442 main DEBUG Installed 1 script engine
+Warning: Nashorn engine is planned to be removed from a future JDK release
+2023-10-21 17:06:41,783 main DEBUG Oracle Nashorn version: 11.0.16.1, language: ECMAScript, threading: Not Thread Safe, compile: true, names: [nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript], factory class: jdk.nashorn.api.scripting.NashornScriptEngineFactory
+2023-10-21 17:06:41,784 main DEBUG PluginManager 'Core' found 122 plugins
+2023-10-21 17:06:41,785 main DEBUG PluginManager 'Level' found 0 plugins
+2023-10-21 17:06:41,789 main DEBUG PluginManager 'Lookup' found 16 plugins
+2023-10-21 17:06:41,793 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-10-21 17:06:41,801 main DEBUG PluginManager 'TypeConverter' found 26 plugins
+2023-10-21 17:06:41,818 main DEBUG PatternLayout$Builder(pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n", PatternSelector=null, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-10-21 17:06:41,819 main DEBUG PluginManager 'Converter' found 47 plugins
+2023-10-21 17:06:41,820 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2023-10-21 17:06:41,826 main DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n), name="LogToConsole", Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null, ={})
+2023-10-21 17:06:41,829 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2023-10-21 17:06:41,829 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-10-21 17:06:41,831 main DEBUG PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-10-21 17:06:41,842 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2023-10-21 17:06:41,845 main DEBUG FileAppender$Builder(fileName="logs/ecommerce.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToFile", Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null, ={})
+2023-10-21 17:06:41,848 main DEBUG Starting FileManager logs/ecommerce.log
+2023-10-21 17:06:41,848 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2023-10-21 17:06:41,850 main DEBUG createAppenders(={LogToConsole, LogToFile})
+2023-10-21 17:06:41,850 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:41,854 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2023-10-21 17:06:41,854 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:41,855 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-10-21 17:06:41,855 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-10-21 17:06:41,858 main DEBUG createLogger(additivity="false", level="INFO", name="com.example.demo", includeLocation="null", ={LogToFile, LogToConsole}, ={}, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null)
+2023-10-21 17:06:41,860 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:41,860 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-10-21 17:06:41,861 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-10-21 17:06:41,863 main DEBUG createLogger(additivity="false", level="ERROR", name="org.springframework.boot", includeLocation="null", ={LogToConsole}, ={}, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null)
+2023-10-21 17:06:41,863 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:41,865 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2023-10-21 17:06:41,865 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:41,866 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-10-21 17:06:41,866 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2023-10-21 17:06:41,867 main DEBUG createLogger(additivity="null", level="ERROR", includeLocation="null", ={LogToFile, LogToConsole}, ={}, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null)
+2023-10-21 17:06:41,868 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2023-10-21 17:06:41,868 main DEBUG createLoggers(={com.example.demo, org.springframework.boot, root})
+2023-10-21 17:06:41,869 main DEBUG Configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml] initialized
+2023-10-21 17:06:41,870 main DEBUG Starting configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml]
+2023-10-21 17:06:41,872 main DEBUG Started configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml] OK.
+2023-10-21 17:06:41,873 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2023-10-21 17:06:41,873 main DEBUG OutputStream closed
+2023-10-21 17:06:41,873 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2023-10-21 17:06:41,874 main DEBUG Appender DefaultConsole-1 stopped with status true
+2023-10-21 17:06:41,875 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@6f27a732 OK
+2023-10-21 17:06:41,970 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd
+2023-10-21 17:06:41,972 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=StatusLogger
+2023-10-21 17:06:41,974 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=ContextSelector
+2023-10-21 17:06:41,975 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Loggers,name=org.springframework.boot
+2023-10-21 17:06:41,976 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Loggers,name=
+2023-10-21 17:06:41,976 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Loggers,name=com.example.demo
+2023-10-21 17:06:41,977 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Appenders,name=LogToConsole
+2023-10-21 17:06:41,980 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Appenders,name=LogToFile
+2023-10-21 17:06:41,982 main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2023-10-21 17:06:41,984 main DEBUG Reconfiguration complete for context[name=5c29bfd] at URI /var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@6e1d8f9e) with optional ClassLoader: null
+2023-10-21 17:06:41,986 main DEBUG Shutdown hook enabled. Registering a new one.
+2023-10-21 17:06:41,987 main DEBUG LoggerContext[name=5c29bfd, org.apache.logging.log4j.core.LoggerContext@6e1d8f9e] started OK.
+[INFO] Running com.example.demo.ECommerceApplicationTests
+2023-10-21 17:06:42,678 main DEBUG Reconfiguration started for context[name=5c29bfd] at URI null (org.apache.logging.log4j.core.LoggerContext@6e1d8f9e) with optional ClassLoader: null
+2023-10-21 17:06:42,678 main DEBUG Using configurationFactory org.apache.logging.log4j.core.config.ConfigurationFactory$Factory@1cc9cfb2
+2023-10-21 17:06:42,692 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
+2023-10-21 17:06:42,694 main DEBUG Closing BufferedInputStream java.io.BufferedInputStream@7918c7f8
+2023-10-21 17:06:42,703 main DEBUG Apache Log4j Core 2.13.3 initializing configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml]
+2023-10-21 17:06:42,705 main DEBUG Installed 1 script engine
+Warning: Nashorn engine is planned to be removed from a future JDK release
+2023-10-21 17:06:42,715 main DEBUG Oracle Nashorn version: 11.0.16.1, language: ECMAScript, threading: Not Thread Safe, compile: true, names: [nashorn, Nashorn, js, JS, JavaScript, javascript, ECMAScript, ecmascript], factory class: jdk.nashorn.api.scripting.NashornScriptEngineFactory
+2023-10-21 17:06:42,718 main DEBUG PluginManager 'Core' found 122 plugins
+2023-10-21 17:06:42,725 main DEBUG PluginManager 'Level' found 0 plugins
+2023-10-21 17:06:42,726 main DEBUG PluginManager 'Lookup' found 16 plugins
+2023-10-21 17:06:42,729 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-10-21 17:06:42,730 main DEBUG PatternLayout$Builder(pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n", PatternSelector=null, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-10-21 17:06:42,731 main DEBUG PluginManager 'Converter' found 47 plugins
+2023-10-21 17:06:42,732 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2023-10-21 17:06:42,732 main DEBUG ConsoleAppender$Builder(target="SYSTEM_OUT", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n), name="LogToConsole", Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null, ={})
+2023-10-21 17:06:42,734 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-10-21 17:06:42,734 main DEBUG PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2023-10-21 17:06:42,735 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.FileAppender].
+2023-10-21 17:06:42,745 main DEBUG FileAppender$Builder(fileName="logs/ecommerce.log", append="null", locking="null", advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="LogToFile", Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null, ={})
+2023-10-21 17:06:42,746 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2023-10-21 17:06:42,747 main DEBUG createAppenders(={LogToConsole, LogToFile})
+2023-10-21 17:06:42,747 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:42,748 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2023-10-21 17:06:42,748 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:42,748 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-10-21 17:06:42,748 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-10-21 17:06:42,749 main DEBUG createLogger(additivity="false", level="INFO", name="com.example.demo", includeLocation="null", ={LogToFile, LogToConsole}, ={}, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null)
+2023-10-21 17:06:42,749 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:42,750 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-10-21 17:06:42,750 main DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-10-21 17:06:42,751 main DEBUG createLogger(additivity="false", level="ERROR", name="org.springframework.boot", includeLocation="null", ={LogToConsole}, ={}, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null)
+2023-10-21 17:06:42,751 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:42,752 main DEBUG createAppenderRef(ref="LogToFile", level="null", Filter=null)
+2023-10-21 17:06:42,753 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-10-21 17:06:42,753 main DEBUG createAppenderRef(ref="LogToConsole", level="null", Filter=null)
+2023-10-21 17:06:42,753 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2023-10-21 17:06:42,754 main DEBUG createLogger(additivity="null", level="ERROR", includeLocation="null", ={LogToFile, LogToConsole}, ={}, Configuration(/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml), Filter=null)
+2023-10-21 17:06:42,754 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2023-10-21 17:06:42,762 main DEBUG createLoggers(={com.example.demo, org.springframework.boot, root})
+2023-10-21 17:06:42,765 main DEBUG Configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml] initialized
+2023-10-21 17:06:42,766 main DEBUG Starting configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml]
+2023-10-21 17:06:42,766 main DEBUG Started configuration XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml] OK.
+2023-10-21 17:06:42,767 main DEBUG Appender LogToFile stopped with status true
+2023-10-21 17:06:42,768 main DEBUG Appender LogToConsole stopped with status true
+2023-10-21 17:06:42,773 main DEBUG Stopped XmlConfiguration[location=/var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml] OK
+2023-10-21 17:06:42,776 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd
+2023-10-21 17:06:42,776 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=StatusLogger
+2023-10-21 17:06:42,784 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=ContextSelector
+2023-10-21 17:06:42,786 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Loggers,name=org.springframework.boot
+2023-10-21 17:06:42,791 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Loggers,name=
+2023-10-21 17:06:42,792 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Loggers,name=com.example.demo
+2023-10-21 17:06:42,792 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Appenders,name=LogToConsole
+2023-10-21 17:06:42,793 main DEBUG Registering MBean org.apache.logging.log4j2:type=5c29bfd,component=Appenders,name=LogToFile
+2023-10-21 17:06:42,794 main DEBUG Reconfiguration complete for context[name=5c29bfd] at URI /var/jenkins_home/workspace/myFirstJob/target/classes/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@6e1d8f9e) with optional ClassLoader: null
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.2.RELEASE)
+
+17:06:42.977 [main] INFO  com.example.demo.ECommerceApplicationTests - Starting ECommerceApplicationTests on 936df8d2bb3a with PID 4960 (started by root in /var/jenkins_home/workspace/myFirstJob)
+2023-10-21 17:06:42,985 main DEBUG AsyncLogger.ThreadNameStrategy=UNCACHED (user specified null, default is UNCACHED)
+2023-10-21 17:06:42,985 main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+17:06:42.987 [main] INFO  com.example.demo.ECommerceApplicationTests - No active profile set, falling back to default profiles: default
+17:06:47.668 [main] INFO  com.example.demo.ECommerceApplicationTests - Started ECommerceApplicationTests in 5.165 seconds (JVM running for 7.318)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.333 s - in com.example.demo.ECommerceApplicationTests
+[INFO] Running com.example.demo.controllers.CartControllerTest
+17:06:48.098 [main] ERROR com.example.demo.controllers.CartController - Can not find User
+17:06:48.107 [main] INFO  com.example.demo.controllers.CartController - Save cart success
+17:06:48.126 [main] ERROR com.example.demo.controllers.CartController - Save cart success
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.266 s - in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+17:06:48.141 [main] INFO  com.example.demo.controllers.ItemController - Get Item success
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+17:06:48.178 [main] ERROR com.example.demo.controllers.OrderController - Not found User
+17:06:48.179 [main] ERROR com.example.demo.controllers.OrderController - Not found User
+17:06:48.179 [main] ERROR com.example.demo.controllers.OrderController - User not found. Can not get history
+17:06:48.180 [main] ERROR com.example.demo.controllers.OrderController - Submit order success
+17:06:48.180 [main] INFO  com.example.demo.controllers.OrderController - Get order success
+17:06:48.181 [main] ERROR com.example.demo.controllers.OrderController - Submit order success
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+17:06:48.204 [main] INFO  com.example.demo.controllers.UserController - Username = AnNT
+17:06:48.205 [main] INFO  com.example.demo.controllers.UserController - Create User success
+17:06:48.206 [main] INFO  com.example.demo.controllers.UserController - Username = AnNT
+17:06:48.207 [main] INFO  com.example.demo.controllers.UserController - Create User success
+17:06:48.208 [main] INFO  com.example.demo.controllers.UserController - User exist
+17:06:48.208 [main] INFO  com.example.demo.controllers.UserController - Username = AnNT
+17:06:48.209 [main] INFO  com.example.demo.controllers.UserController - Create User success
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.model.persistence.ItemTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.example.demo.model.persistence.ItemTest
+[INFO] Running com.example.demo.model.persistence.UserOrderTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.example.demo.model.persistence.UserOrderTest
+[INFO] Running com.example.demo.security.UserDetailsServiceImplTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in com.example.demo.security.UserDetailsServiceImplTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.2.3:war (default-war) @ ecommerce-app ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [ecommerce-app] in [/var/jenkins_home/workspace/myFirstJob/target/ecommerce-app-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [109 msecs]
+[INFO] Building war: /var/jenkins_home/workspace/myFirstJob/target/ecommerce-app-0.0.1-SNAPSHOT.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.3.2.RELEASE:repackage (repackage) @ ecommerce-app ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.302 s
+[INFO] Finished at: 2023-10-21T17:06:51Z
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/jenkins_home/workspace/myFirstJob/target/ecommerce-app-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context myApp.war
+  [/var/jenkins_home/workspace/myFirstJob/target/ecommerce-app-0.0.1-SNAPSHOT.war] is not deployed. Doing a fresh deployment.
+  Deploying [/var/jenkins_home/workspace/myFirstJob/target/ecommerce-app-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS
